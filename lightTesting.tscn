@@ -190,10 +190,10 @@ tracks/3/path = NodePath("../Sprite2D:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, true]
 }
 
 [sub_resource type="Animation" id="Animation_s8f6v"]
@@ -298,7 +298,7 @@ scale = Vector2(5.8, 4.1)
 color = Color(0.101868, 0.101868, 0.101867, 1)
 
 [node name="LightOccluderNodes" type="StaticBody2D" parent="."]
-position = Vector2(0, -128)
+position = Vector2(126, -364)
 scale = Vector2(4.8, -0.4)
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="LightOccluderNodes"]
@@ -311,7 +311,7 @@ occluder = SubResource("OccluderPolygon2D_bcue0")
 occluder = SubResource("OccluderPolygon2D_7wxar")
 
 [node name="PointLight2D11" type="PointLight2D" parent="."]
-position = Vector2(-160, -288)
+position = Vector2(413, -349)
 scale = Vector2(-2.8, -2.8)
 color = Color(0.89, 0.51976, 0.0356, 1)
 energy = 3.36
@@ -321,7 +321,7 @@ shadow_filter_smooth = 0.5
 texture = ExtResource("3_8p1e3")
 
 [node name="PointLight2D12" type="PointLight2D" parent="."]
-position = Vector2(288, -288)
+position = Vector2(189, -703)
 scale = Vector2(-2.8, -2.8)
 color = Color(0.89, 0.51976, 0.0356, 1)
 energy = 3.36
@@ -331,7 +331,7 @@ shadow_filter_smooth = 0.5
 texture = ExtResource("3_8p1e3")
 
 [node name="PointLight2D13" type="PointLight2D" parent="."]
-position = Vector2(64, -480)
+position = Vector2(48, -538)
 scale = Vector2(-2.8, -2.8)
 color = Color(0.89, 0.51976, 0.0356, 1)
 energy = 3.36
@@ -341,7 +341,7 @@ shadow_filter_smooth = 0.5
 texture = ExtResource("3_8p1e3")
 
 [node name="PointLight2D14" type="PointLight2D" parent="."]
-position = Vector2(256, -32)
+position = Vector2(-93, -185)
 scale = Vector2(-2.8, -2.8)
 color = Color(0.89, 0.51976, 0.0356, 1)
 energy = 3.36
@@ -351,7 +351,7 @@ shadow_filter_smooth = 0.5
 texture = ExtResource("3_8p1e3")
 
 [node name="PointLight2D15" type="PointLight2D" parent="."]
-position = Vector2(354, -272)
+position = Vector2(495, -453)
 scale = Vector2(-2.8, -2.8)
 color = Color(0.89, 0.51976, 0.0356, 1)
 energy = 3.36
@@ -364,7 +364,7 @@ texture = ExtResource("3_8p1e3")
 color = Color(0.101961, 0.101961, 0.101961, 1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(330, -237)
+position = Vector2(251, -335)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 
@@ -378,4 +378,5 @@ libraries = {
 root_node = NodePath("../Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(2, 1)
 texture = SubResource("CanvasTexture_n42ly")
