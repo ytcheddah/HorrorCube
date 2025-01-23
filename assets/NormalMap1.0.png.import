@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1bcw5oaxupy6"
-path="res://.godot/imported/MC_Simpleton_SpriteSheet.png-fb9ae6e4f2d495d2dee3b0e0b8163150.ctex"
+uid="uid://bt2i7lbipjtln"
+path="res://.godot/imported/NormalMap1.0.png-3984bdad611037970b5456af7d118082.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MC_Simpleton_SpriteSheet.png"
-dest_files=["res://.godot/imported/MC_Simpleton_SpriteSheet.png-fb9ae6e4f2d495d2dee3b0e0b8163150.ctex"]
+source_file="res://assets/NormalMap1.0.png"
+dest_files=["res://.godot/imported/NormalMap1.0.png-3984bdad611037970b5456af7d118082.ctex"]
 
 [params]
 

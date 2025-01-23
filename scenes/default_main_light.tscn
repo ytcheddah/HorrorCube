@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyauutuypbecf"]
 
-[ext_resource type="Texture2D" uid="uid://bgjhcy72rhw25" path="res://neutral_point_light.webp" id="1_hrphk"]
+[ext_resource type="Texture2D" uid="uid://bgjhcy72rhw25" path="res://assets/neutral_point_light.webp" id="1_hrphk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g543m"]
 radius = 120.519
