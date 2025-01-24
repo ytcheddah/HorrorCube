@@ -3,12 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://bgjhcy72rhw25" path="res://assets/neutral_point_light.webp" id="1_hrphk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g543m"]
-radius = 120.519
+radius = 118.511
 
 [node name="defaultMainLight" type="Node2D"]
 
 [node name="whiteLight" type="PointLight2D" parent="."]
-position = Vector2(278.827, 261)
 scale = Vector2(-2.15177, -2)
 color = Color(0.691357, 0.691357, 0.691357, 1)
 energy = 5.0
@@ -20,4 +19,5 @@ texture = ExtResource("1_hrphk")
 [node name="Area2D" type="Area2D" parent="whiteLight"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="whiteLight/Area2D"]
+visible = false
 shape = SubResource("CircleShape2D_g543m")
