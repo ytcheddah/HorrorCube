@@ -32,14 +32,6 @@ size = Vector2(6.45833, 477.5)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(342, 626)
 
-[node name="ColorRect3" type="ColorRect" parent="StaticBody2D"]
-offset_top = -144.0
-offset_right = 40.0
-offset_bottom = -104.0
-scale = Vector2(0.8, -6)
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
 [node name="Background" type="ColorRect" parent="StaticBody2D"]
 offset_left = -990.0
 offset_top = -990.0
@@ -86,20 +78,22 @@ shape = SubResource("RectangleShape2D_n3wm0")
 position = Vector2(23.2292, 400)
 shape = SubResource("RectangleShape2D_n1q7q")
 
-[node name="defaultMainLight" parent="." instance=ExtResource("1_h7ase")]
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="defaultMainLight" parent="Lights" instance=ExtResource("1_h7ase")]
 position = Vector2(-14, -49)
 
-[node name="defaultMainLight2" parent="." instance=ExtResource("1_h7ase")]
+[node name="defaultMainLight2" parent="Lights" instance=ExtResource("1_h7ase")]
 position = Vector2(310, 225)
 
-[node name="defaultMainLight3" parent="." instance=ExtResource("1_h7ase")]
+[node name="defaultMainLight3" parent="Lights" instance=ExtResource("1_h7ase")]
 position = Vector2(613, -110)
 
-[node name="defaultMainLight4" parent="." instance=ExtResource("1_h7ase")]
+[node name="defaultMainLight4" parent="Lights" instance=ExtResource("1_h7ase")]
 position = Vector2(169, 36)
 
-[node name="mainCharacter" parent="." instance=ExtResource("2_e1mff")]
-position = Vector2(151, 104)
-
-[node name="defaultMainLight5" parent="." instance=ExtResource("1_h7ase")]
+[node name="defaultMainLight5" parent="Lights" instance=ExtResource("1_h7ase")]
 position = Vector2(254, -53)
+
+[node name="mainCharacter" parent="." instance=ExtResource("2_e1mff")]
+position = Vector2(71, 56)
