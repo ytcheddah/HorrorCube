@@ -45,6 +45,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_xanhs"]
 resource_name = "walkDown"
+length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -77,10 +78,10 @@ tracks/2/path = NodePath("../Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [8, 9, 10, 11]
+"values": [9, 10, 11, 8]
 }
 
 [sub_resource type="Animation" id="Animation_ukdeo"]
@@ -124,6 +125,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_mqyr4"]
 resource_name = "walkLeft"
+length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -156,10 +158,10 @@ tracks/2/path = NodePath("../Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [1, 2, 3, 0]
 }
 
 [sub_resource type="Animation" id="Animation_brlsd"]
@@ -203,6 +205,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_t07x6"]
 resource_name = "walkRight"
+length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -235,10 +238,10 @@ tracks/2/path = NodePath("../Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [12, 13, 14, 15]
+"values": [13, 14, 15, 12]
 }
 
 [sub_resource type="Animation" id="Animation_3x0un"]
@@ -282,6 +285,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_s8f6v"]
 resource_name = "walkUp"
+length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -314,10 +318,10 @@ tracks/2/path = NodePath("../Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [4, 5, 4, 7]
+"values": [5, 4, 7, 4]
 }
 
 [sub_resource type="Animation" id="Animation_7gfnq"]
@@ -404,9 +408,10 @@ vframes = 4
 shape = SubResource("CapsuleShape2D_u5mt3")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(1.2, 1.2)
+limit_left = 0
 limit_top = 0
 limit_bottom = 650
 limit_smoothed = true
+rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
