@@ -1,10 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://tbse1mhic7ep"]
+[gd_scene load_steps=11 format=3 uid="uid://tbse1mhic7ep"]
 
 [ext_resource type="PackedScene" uid="uid://cyauutuypbecf" path="res://scenes/default_main_light.tscn" id="1_h7ase"]
 [ext_resource type="PackedScene" uid="uid://dpghg4e68hxw5" path="res://scenes/main_character.tscn" id="2_e1mff"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7h53"]
-size = Vector2(22.7074, 19.2423)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qgmpj"]
 polygon = PackedVector2Array(20, 640, 20, 160, 26.6667, 160, 26.6667, 640)
@@ -16,7 +13,19 @@ polygon = PackedVector2Array(-26.6667, 160, -26.6667, -320, 40, -320, 40, -160, 
 polygon = PackedVector2Array(40, 0, 0, 0, 0, 640, 6.66667, 640, 6.66667, 60, 40, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bppbn"]
-size = Vector2(25.7434, 30.5168)
+size = Vector2(5.19295, 15.2931)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_getc0"]
+size = Vector2(21.1861, 4.97059)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifswu"]
+size = Vector2(40, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3wm0"]
+size = Vector2(6.66667, 583.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1q7q"]
+size = Vector2(6.45833, 477.5)
 
 [node name="TestMap" type="Node2D"]
 
@@ -37,13 +46,8 @@ offset_top = -990.0
 offset_right = -604.0
 offset_bottom = -600.0
 scale = Vector2(5.8, 4.1)
-color = Color(0.233926, 0.233926, 0.233924, 1)
+color = Color(0.158472, 0.158473, 0.158471, 1)
 metadata/_edit_use_anchors_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(29.7285, -364.541)
-scale = Vector2(2.7543, 6.7083)
-shape = SubResource("RectangleShape2D_e7h53")
 
 [node name="LightOccluderNodes" type="StaticBody2D" parent="."]
 position = Vector2(468, 262)
@@ -59,13 +63,28 @@ occluder = SubResource("OccluderPolygon2D_kyglv")
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="LightOccluderNodes"]
 position = Vector2(-4.79167, -52.5)
 occluder = SubResource("OccluderPolygon2D_rijfl")
-sdf_collision = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LightOccluderNodes"]
-visible = false
-position = Vector2(7.22025, 164.671)
+position = Vector2(-30.3467, -183.043)
 scale = Vector2(2.51428, 31.3158)
 shape = SubResource("RectangleShape2D_bppbn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LightOccluderNodes"]
+position = Vector2(2.94942, -342.829)
+scale = Vector2(2.51428, 31.3158)
+shape = SubResource("RectangleShape2D_getc0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LightOccluderNodes"]
+position = Vector2(15.2083, -22.5)
+shape = SubResource("RectangleShape2D_ifswu")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LightOccluderNodes"]
+position = Vector2(-1.45835, 295.625)
+shape = SubResource("RectangleShape2D_n3wm0")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="LightOccluderNodes"]
+position = Vector2(23.2292, 400)
+shape = SubResource("RectangleShape2D_n1q7q")
 
 [node name="defaultMainLight" parent="." instance=ExtResource("1_h7ase")]
 position = Vector2(-14, -49)
