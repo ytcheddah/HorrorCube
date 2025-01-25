@@ -108,23 +108,8 @@ position = Vector2(236, 831)
 [node name="blueLight" parent="Lights" instance=ExtResource("7_t6mlp")]
 position = Vector2(567, 821)
 
-[node name="redLight2" parent="Lights" instance=ExtResource("5_sgga8")]
-position = Vector2(1051, 898)
-
-[node name="redLight3" parent="Lights" instance=ExtResource("5_sgga8")]
-position = Vector2(1430, 912)
-
-[node name="redLight4" parent="Lights" instance=ExtResource("5_sgga8")]
-position = Vector2(1823, 903)
-
-[node name="redLight5" parent="Lights" instance=ExtResource("5_sgga8")]
-position = Vector2(1418, 460)
-
-[node name="redLight6" parent="Lights" instance=ExtResource("5_sgga8")]
-position = Vector2(1884, 460)
-
 [node name="redLight7" parent="Lights" instance=ExtResource("5_sgga8")]
-position = Vector2(1321, 24)
+position = Vector2(1442, 965)
 
 [node name="mainCharacter" parent="." instance=ExtResource("2_e1mff")]
 position = Vector2(145, 114)

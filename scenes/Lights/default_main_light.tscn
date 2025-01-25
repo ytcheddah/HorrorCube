@@ -3,18 +3,26 @@
 [ext_resource type="Texture2D" uid="uid://bgjhcy72rhw25" path="res://assets/neutral_point_light.webp" id="1_hrphk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g543m"]
-radius = 118.511
+radius = 240.418
 
 [node name="defaultMainLight" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -696.0
+offset_top = -499.0
+offset_right = 993.0
+offset_bottom = 661.0
+color = Color(0.241156, 0.241156, 0.241156, 1)
 
 [node name="whiteLight" type="PointLight2D" parent="."]
 scale = Vector2(-2.15177, -2)
 color = Color(0.691357, 0.691357, 0.691357, 1)
-energy = 5.0
+energy = 4.0
 shadow_enabled = true
-shadow_filter = 1
 shadow_filter_smooth = 0.5
 texture = ExtResource("1_hrphk")
+texture_scale = 2.0
 
 [node name="Area2D" type="Area2D" parent="whiteLight"]
 
