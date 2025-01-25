@@ -1,11 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://tbse1mhic7ep"]
+[gd_scene load_steps=17 format=3 uid="uid://tbse1mhic7ep"]
 
 [ext_resource type="PackedScene" uid="uid://cyauutuypbecf" path="res://scenes/Lights/default_main_light.tscn" id="1_h7ase"]
 [ext_resource type="PackedScene" uid="uid://dpghg4e68hxw5" path="res://scenes/main_character.tscn" id="2_e1mff"]
 [ext_resource type="PackedScene" uid="uid://hmfei3cuywpr" path="res://scenes/Lights/yellowLight.tscn" id="3_20ude"]
 [ext_resource type="PackedScene" uid="uid://bkdt5rrp8cdwf" path="res://scenes/Lights/greenLight.tscn" id="4_b84iu"]
 [ext_resource type="PackedScene" uid="uid://c3nfs38cfgrdr" path="res://scenes/Lights/redLight.tscn" id="5_sgga8"]
+[ext_resource type="PackedScene" uid="uid://c2g30yvpwh5rk" path="res://scenes/Lights/orangeLight.tscn" id="6_as3oq"]
 [ext_resource type="PackedScene" uid="uid://rvs1l15cbvrf" path="res://scenes/Lights/tealLight.tscn" id="6_bd1ew"]
+[ext_resource type="PackedScene" uid="uid://b5nbnu0fyo8ub" path="res://scenes/Lights/blueLight.tscn" id="7_t6mlp"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qgmpj"]
 polygon = PackedVector2Array(20, 640, 20, 160, 26.6667, 160, 26.6667, 640)
@@ -79,29 +81,53 @@ shape = SubResource("RectangleShape2D_n1q7q")
 
 [node name="Lights" type="Node2D" parent="."]
 
-[node name="defaultMainLight3" parent="Lights" instance=ExtResource("1_h7ase")]
+[node name="defaultMainLight" parent="Lights" instance=ExtResource("1_h7ase")]
 position = Vector2(492, 247)
 
-[node name="defaultMainLight4" parent="Lights" instance=ExtResource("1_h7ase")]
+[node name="defaultMainLight2" parent="Lights" instance=ExtResource("1_h7ase")]
 position = Vector2(391, 340)
 
-[node name="defaultMainLight5" parent="Lights" instance=ExtResource("1_h7ase")]
+[node name="defaultMainLight3" parent="Lights" instance=ExtResource("1_h7ase")]
 position = Vector2(236, 162)
+
+[node name="yellowLight" parent="Lights" instance=ExtResource("3_20ude")]
+position = Vector2(254, 559)
+
+[node name="greenLight" parent="Lights" instance=ExtResource("4_b84iu")]
+position = Vector2(565, 559)
+
+[node name="redLight" parent="Lights" instance=ExtResource("5_sgga8")]
+position = Vector2(868, 111)
+
+[node name="tealLight" parent="Lights" instance=ExtResource("6_bd1ew")]
+position = Vector2(977, 446)
+
+[node name="orangeLight" parent="Lights" instance=ExtResource("6_as3oq")]
+position = Vector2(236, 831)
+
+[node name="blueLight" parent="Lights" instance=ExtResource("7_t6mlp")]
+position = Vector2(567, 821)
+
+[node name="redLight2" parent="Lights" instance=ExtResource("5_sgga8")]
+position = Vector2(1051, 898)
+
+[node name="redLight3" parent="Lights" instance=ExtResource("5_sgga8")]
+position = Vector2(1430, 912)
+
+[node name="redLight4" parent="Lights" instance=ExtResource("5_sgga8")]
+position = Vector2(1823, 903)
+
+[node name="redLight5" parent="Lights" instance=ExtResource("5_sgga8")]
+position = Vector2(1418, 460)
+
+[node name="redLight6" parent="Lights" instance=ExtResource("5_sgga8")]
+position = Vector2(1884, 460)
+
+[node name="redLight7" parent="Lights" instance=ExtResource("5_sgga8")]
+position = Vector2(1321, 24)
 
 [node name="mainCharacter" parent="." instance=ExtResource("2_e1mff")]
 position = Vector2(145, 114)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
-
-[node name="defaultMainLight" parent="." instance=ExtResource("3_20ude")]
-position = Vector2(203, 502)
-
-[node name="defaultMainLight2" parent="." instance=ExtResource("4_b84iu")]
-position = Vector2(609, 522)
-
-[node name="defaultMainLight3" parent="." instance=ExtResource("5_sgga8")]
-position = Vector2(868, 111)
-
-[node name="defaultMainLight4" parent="." instance=ExtResource("6_bd1ew")]
-position = Vector2(977, 446)

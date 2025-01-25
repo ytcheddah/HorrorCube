@@ -410,7 +410,7 @@ shape = SubResource("CapsuleShape2D_u5mt3")
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = 0
 limit_top = 0
-limit_bottom = 650
+limit_bottom = 1500
 limit_smoothed = true
 rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
