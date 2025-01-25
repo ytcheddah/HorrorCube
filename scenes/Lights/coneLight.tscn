@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtawadefhar56"]
+[gd_scene load_steps=2 format=3 uid="uid://ct1ws77373ae2"]
 
 [ext_resource type="Texture2D" uid="uid://8j3xhq5lg4jd" path="res://assets/lightTextures/coneLight.png" id="1_637c6"]
 
@@ -18,5 +18,7 @@ color = Color(0.124083, 0.124083, 0.124083, 1)
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(0, 320)
 scale = Vector2(1.25067, 1.25067)
-energy = 2.0
+energy = 1.8
+shadow_enabled = true
 texture = ExtResource("1_637c6")
+height = 300.0

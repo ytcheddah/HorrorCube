@@ -23,6 +23,7 @@ shadow_enabled = true
 shadow_filter_smooth = 0.5
 texture = ExtResource("1_hrphk")
 texture_scale = 2.0
+height = 300.0
 
 [node name="Area2D" type="Area2D" parent="whiteLight"]
 
