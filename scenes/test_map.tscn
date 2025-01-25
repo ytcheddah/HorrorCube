@@ -116,4 +116,4 @@ position = Vector2(86, 80)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(1, 0)
-color = Color(0.0777247, 0.353933, 0.362213, 1)
+color = Color(0, 0, 0, 1)

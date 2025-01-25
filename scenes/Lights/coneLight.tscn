@@ -1,12 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://dtawadefhar56"]
 
-[ext_resource type="Texture2D" uid="uid://cvlomhxuhtomw" path="res://assets/lightTextures/coneLight.png" id="1_637c6"]
+[ext_resource type="Texture2D" uid="uid://8j3xhq5lg4jd" path="res://assets/lightTextures/coneLight.png" id="1_637c6"]
 
-[node name="Node2D" type="Node2D"]
+[node name="coneLight" type="Node2D"]
 position = Vector2(128, 0)
 scale = Vector2(0.39801, 0.39801)
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -320.0
 offset_top = -3.05176e-05
 offset_right = -280.0

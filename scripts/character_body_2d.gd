@@ -50,11 +50,11 @@ func update_animation():
 		# Determine movement direction and play the corresponding animation
 		if abs(input.x) > abs(input.y):  # Moving left or right
 			if input.x > 0:
-				animation_player.play("walkLeft")
-				last_direction = "walkLeft"
-			else:
 				animation_player.play("walkRight")
 				last_direction = "walkRight"
+			else:
+				animation_player.play("walkLeft")
+				last_direction = "walkLeft"
 		else:  # Moving up or down
 			if input.y > 0:
 				animation_player.play("walkDown")
