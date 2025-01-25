@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2g30yvpwh5rk"]
+
+[ext_resource type="Texture2D" uid="uid://bgjhcy72rhw25" path="res://assets/neutral_point_light.webp" id="1_wd5le"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g543m"]
+radius = 118.511
+
+[node name="defaultMainLight" type="Node2D"]
+
+[node name="orangeLight" type="PointLight2D" parent="."]
+scale = Vector2(-2.15177, -2)
+color = Color(0.83681, 0.49587, 0.2546, 1)
+energy = 5.0
+shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 0.5
+texture = ExtResource("1_wd5le")
+
+[node name="Area2D" type="Area2D" parent="orangeLight"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orangeLight/Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_g543m")
