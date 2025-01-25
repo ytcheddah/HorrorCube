@@ -17,8 +17,10 @@ func _physics_process(delta):
 	update_animation()
 
 func get_input():
-	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
-	input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	input.x = int(Input.is_action_pressed("Move Right")) - int(Input.is_action_pressed("Move Left"))
+	input.y = int(Input.is_action_pressed("Move Down")) - int(Input.is_action_pressed("Move Up"))
+	# input = Input.is_action_pressed("Place Trap")
+	
 	return input.normalized()
 
 func player_movement(delta):
@@ -33,6 +35,7 @@ func player_movement(delta):
 		velocity += (input * accel * delta)
 		velocity = velocity.limit_length(max_speed)
 
+	print(input) # shows how the movement works, really cool!
 	move_and_slide()
 
 func update_animation():
@@ -59,3 +62,5 @@ func update_animation():
 			else:
 				animation_player.play("walkUp")
 				last_direction = "walkUp"
+				
+	
