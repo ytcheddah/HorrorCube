@@ -112,7 +112,7 @@ position = Vector2(567, 821)
 position = Vector2(1442, 965)
 
 [node name="mainCharacter" parent="." instance=ExtResource("2_e1mff")]
-position = Vector2(86, 80)
+position = Vector2(107, 84)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(1, 0)

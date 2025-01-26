@@ -11,6 +11,9 @@ var animation_player : AnimationPlayer
 var last_direction : String = ""  # Tracks the last direction the character was walking
 var key_states = {}
 var facing = Vector2(0,1) # Down by default
+var trap_list = []
+var can_spawn_trap = true
+var trap_cooldown_time = 1 
 
 func _ready():
 	# Make sure we have an AnimationPlayer node in the scene
@@ -32,13 +35,13 @@ func _process(delta):
 func _input(event):
 	# Check if the event was a keypress or a key release
 	for key in key_states.keys():
-		if Input.is_action_pressed(key):
+		if Input.is_action_just_pressed(key):
 			key_states[key] = true
 		elif Input.is_action_just_released(key):
 			key_states[key] = false
 			
-		if event.is_action_pressed("Place Trap"):
-			spawn_trap()
+	if event.is_action_pressed("Place Trap") and event.is_pressed():	
+		spawn_trap()
 			
 func print_key_states():
 	
@@ -49,7 +52,6 @@ func print_key_states():
 func get_input():
 	input.x = int(Input.is_action_pressed("Move Right")) - int(Input.is_action_pressed("Move Left"))
 	input.y = int(Input.is_action_pressed("Move Down")) - int(Input.is_action_pressed("Move Up"))
-	# input = Input.is_action_pressed("Place Trap")
 	
 	return input.normalized()
 
@@ -82,28 +84,38 @@ func update_animation():
 			if input.x > 0:
 				animation_player.play("walkRight")
 				last_direction = "walkRight"
-				var facing = Vector2(1,0)
+				facing = Vector2(1,0)
 			else:
 				animation_player.play("walkLeft")
 				last_direction = "walkLeft"
-				var facing = Vector2(-1,0)
+				facing = Vector2(-1,0)
 		else:  # Moving up or down
 			if input.y > 0:
 				animation_player.play("walkDown")
 				last_direction = "walkDown"
-				var facing = Vector2(0,1)
+				facing = Vector2(0,1)
 			else:
 				animation_player.play("walkUp")
 				last_direction = "walkUp"
-				var facing = Vector2(0,-1)
+				facing = Vector2(0,-1)
 				
 func spawn_trap():
-	# create instance of trap
+	# create trap instance
 	var trap_instance = trap_01.instantiate()
+	trap_list.append(trap_instance)
 	
 	# Position trap in front of character
-	var offset = Vector2(50 * facing.x, 50 * facing.y)
+	# the -105 and -90 need to be fixed in the future
+	var offset = Vector2((60 * facing.x) - 105, (60 * facing.y) - 90) 
 	trap_instance.position = global_position + offset
 	
-	# Add the trap to the scene tree
 	get_parent().add_child(trap_instance)
+	
+	# Start cooldown after each placed trap
+	can_spawn_trap = false
+	await((get_tree().create_timer(trap_cooldown_time)).timeout)
+	can_spawn_trap = true
+	
+	# print for debugging
+	print("Trap # ",len(trap_list), ": ",trap_instance.position)
+	print(facing)

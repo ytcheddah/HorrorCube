@@ -519,7 +519,6 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0, -1)
 texture = SubResource("CanvasTexture_n42ly")
 hframes = 4
 vframes = 4
