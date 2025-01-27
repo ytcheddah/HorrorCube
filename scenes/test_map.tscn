@@ -1,13 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://tbse1mhic7ep"]
+[gd_scene load_steps=18 format=3 uid="uid://tbse1mhic7ep"]
 
 [ext_resource type="PackedScene" uid="uid://cyauutuypbecf" path="res://scenes/Lights/default_main_light.tscn" id="1_h7ase"]
 [ext_resource type="PackedScene" uid="uid://dpghg4e68hxw5" path="res://scenes/main_character.tscn" id="2_e1mff"]
-[ext_resource type="PackedScene" uid="uid://hmfei3cuywpr" path="res://scenes/yellowLight.tscn" id="3_20ude"]
+[ext_resource type="PackedScene" path="res://scenes/yellowLight.tscn" id="3_20ude"]
 [ext_resource type="PackedScene" uid="uid://bkdt5rrp8cdwf" path="res://scenes/Lights/greenLight.tscn" id="4_b84iu"]
 [ext_resource type="PackedScene" uid="uid://c3nfs38cfgrdr" path="res://scenes/Lights/redLight.tscn" id="5_sgga8"]
 [ext_resource type="PackedScene" uid="uid://c2g30yvpwh5rk" path="res://scenes/Lights/orangeLight.tscn" id="6_as3oq"]
 [ext_resource type="PackedScene" uid="uid://rvs1l15cbvrf" path="res://scenes/Lights/tealLight.tscn" id="6_bd1ew"]
 [ext_resource type="PackedScene" uid="uid://b5nbnu0fyo8ub" path="res://scenes/Lights/blueLight.tscn" id="7_t6mlp"]
+[ext_resource type="PackedScene" uid="uid://c2ifuesqktkbu" path="res://scenes/Monsters/angremlin.tscn" id="9_yke0r"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qgmpj"]
 polygon = PackedVector2Array(20, 640, 20, 160, 26.6667, 160, 26.6667, 640)
@@ -91,7 +92,7 @@ position = Vector2(391, 340)
 position = Vector2(236, 162)
 
 [node name="yellowLight" parent="Lights" instance=ExtResource("3_20ude")]
-position = Vector2(254, 559)
+position = Vector2(1393, 383)
 
 [node name="greenLight" parent="Lights" instance=ExtResource("4_b84iu")]
 position = Vector2(565, 559)
@@ -103,16 +104,19 @@ position = Vector2(868, 111)
 position = Vector2(977, 446)
 
 [node name="orangeLight" parent="Lights" instance=ExtResource("6_as3oq")]
-position = Vector2(236, 831)
+position = Vector2(1822, 650)
 
 [node name="blueLight" parent="Lights" instance=ExtResource("7_t6mlp")]
-position = Vector2(567, 821)
+position = Vector2(821, 840)
 
 [node name="redLight7" parent="Lights" instance=ExtResource("5_sgga8")]
 position = Vector2(1442, 965)
 
 [node name="mainCharacter" parent="." instance=ExtResource("2_e1mff")]
 position = Vector2(107, 84)
+
+[node name="Angremlin" parent="." instance=ExtResource("9_yke0r")]
+position = Vector2(227, 717)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(1, 0)

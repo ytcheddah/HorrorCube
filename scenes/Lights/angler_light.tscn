@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn4ami6why02k"]
+
+[ext_resource type="Texture2D" uid="uid://dhq2j0cye83rx" path="res://assets/lightTextures/pointLight.webp" id="1_a1ghk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fpvra"]
+radius = 184.043
+
+[node name="angler_light" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -220.0
+offset_top = -219.0
+offset_right = 224.0
+offset_bottom = 222.0
+color = Color(0.165656, 0.165656, 0.165656, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.791834, 0.537371, 0.187417, 1)
+energy = 3.0
+texture = ExtResource("1_a1ghk")
+texture_scale = 0.5
+
+[node name="Area2D" type="Area2D" parent="PointLight2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PointLight2D/Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_fpvra")
