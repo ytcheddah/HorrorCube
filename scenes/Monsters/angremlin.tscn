@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2ifuesqktkbu"]
+[gd_scene load_steps=12 format=3 uid="uid://c2ifuesqktkbu"]
 
 [ext_resource type="Texture2D" uid="uid://d78rqosg8axq" path="res://assets/monsters/angremlin.png" id="1_3qicq"]
+[ext_resource type="Script" path="res://scripts/angremlin.gd" id="1_am3eg"]
 [ext_resource type="PackedScene" uid="uid://bn4ami6why02k" path="res://scenes/Lights/angler_light.tscn" id="2_qh6lf"]
 [ext_resource type="Texture2D" uid="uid://cgy0rqufmt2dd" path="res://assets/monsters/angremlin_n_edit.png" id="3_t0mtq"]
 
@@ -9,34 +10,22 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/path = NodePath("angler_light:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("angler_light:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -50,7 +39,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/path = NodePath("Sprite2D:hframes")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -62,7 +51,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:flip_v")
+tracks/1/path = NodePath("Sprite2D:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -98,6 +87,42 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_aey2j"]
 resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nqqrm"]
 _data = {
@@ -113,9 +138,13 @@ normal_texture = ExtResource("3_t0mtq")
 [sub_resource type="CircleShape2D" id="CircleShape2D_eibow"]
 radius = 21.095
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5qn6"]
+radius = 338.148
+
 [node name="Angremlin" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_am3eg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 libraries = {
@@ -135,3 +164,10 @@ shape = SubResource("CircleShape2D_eibow")
 
 [node name="angler_light" parent="CharacterBody2D" instance=ExtResource("2_qh6lf")]
 position = Vector2(-37, -1)
+
+[node name="detection_area" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/detection_area"]
+visible = false
+position = Vector2(-44, 0)
+shape = SubResource("CircleShape2D_s5qn6")
