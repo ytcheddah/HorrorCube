@@ -113,7 +113,7 @@ position = Vector2(821, 840)
 position = Vector2(1442, 965)
 
 [node name="mainCharacter" parent="." instance=ExtResource("2_e1mff")]
-position = Vector2(107, 84)
+position = Vector2(177, 228)
 
 [node name="Angremlin" parent="." instance=ExtResource("9_yke0r")]
 position = Vector2(227, 717)
@@ -121,3 +121,16 @@ position = Vector2(227, 717)
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(1, 0)
 color = Color(0, 0, 0, 1)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+modulate = Color(2.88785e-07, 0.683329, 0.684211, 1)
+offset_left = 24.0
+offset_top = 19.0
+offset_right = 263.0
+offset_bottom = 112.0
+tooltip_text = "yeah thats right, if you hover me with the mouse all this text pops up hahahahaha"
+text = "Press \"T\" to place Trap.
+Press \"F\" to toggle headlight.
+Press \"Spacebar\" to roll."
+placeholder_text = "Controls..."
+editable = false

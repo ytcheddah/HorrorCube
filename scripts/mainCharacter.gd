@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const max_speed = 200
-const accel = 1500
-const friction = 1200
+const MAX_SPEED = 200
+const ACCEL = 500
+const FRICTION = 1200
 
 @onready var headlight: Node2D = $coneLight
 var trap_01: PackedScene = preload("res://scenes/Traps/trap_01.tscn")
@@ -65,13 +65,13 @@ func player_movement(delta):
 	input = get_input()
 
 	if input == Vector2.ZERO:
-		if velocity.length() > (friction * delta):
-			velocity -= velocity.normalized() * (friction * delta)
+		if velocity.length() > (FRICTION * delta):
+			velocity -= velocity.normalized() * (FRICTION * delta)
 		else:
 			velocity = Vector2.ZERO
 	else:
-		velocity += (input * accel * delta)
-		velocity = velocity.limit_length(max_speed)
+		velocity += (input * ACCEL * delta)
+		velocity = velocity.limit_length(MAX_SPEED)
 
 	#print(input) # shows how the movement works, really cool!
 	move_and_slide()
@@ -111,8 +111,8 @@ func spawn_trap():
 	trap_list.append(trap_instance)
 	
 	# Position trap in front of character
-	# the -105 and -90 need to be fixed in the future
-	var offset = Vector2((60 * facing.x) - 105, (60 * facing.y) - 90) 
+	# the -178 and -232 are a temporary FAKE fix, debug me!
+	var offset = Vector2((60 * facing.x) - 178, (60 * facing.y) - 232) 
 	trap_instance.position = global_position + offset
 	
 	get_parent().add_child(trap_instance)
