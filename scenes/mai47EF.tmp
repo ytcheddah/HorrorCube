@@ -528,7 +528,6 @@ frame = 8
 shape = SubResource("CapsuleShape2D_u5mt3")
 
 [node name="coneLight" parent="CharacterBody2D" instance=ExtResource("4_45ek0")]
-visible = false
 show_behind_parent = true
 position = Vector2(0, -17)
 

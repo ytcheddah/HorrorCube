@@ -4,10 +4,13 @@ const max_speed = 200
 const accel = 1500
 const friction = 1200
 
+@onready var headlight: Node2D = $coneLight
 var trap_01: PackedScene = preload("res://scenes/Traps/trap_01.tscn")
+var animation_player : AnimationPlayer
+
+var headlight_is_on = false
 
 var input = Vector2.ZERO
-var animation_player : AnimationPlayer
 var last_direction : String = ""  # Tracks the last direction the character was walking
 var key_states = {}
 var facing = Vector2(0,1) # Down by default
@@ -42,6 +45,9 @@ func _input(event):
 			
 	if event.is_action_pressed("Place Trap") and event.is_pressed():	
 		spawn_trap()
+		
+	if event.is_action_pressed("Toggle HeadLight") and event.is_pressed():
+		toggle_headlight()		
 			
 func print_key_states():
 	
@@ -119,3 +125,12 @@ func spawn_trap():
 	# print for debugging
 	print("Trap # ",len(trap_list), ": ",trap_instance.position)
 	print(facing)
+	
+func toggle_headlight():
+	# if its on, this will hide it, otherwise it will show. defaults to false
+	if headlight_is_on:
+		headlight_is_on = false
+		headlight.hide()
+	else:
+		headlight_is_on = true
+		headlight.show()
