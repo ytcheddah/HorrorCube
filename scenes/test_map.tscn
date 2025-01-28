@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cyauutuypbecf" path="res://scenes/Lights/default_main_light.tscn" id="1_h7ase"]
 [ext_resource type="PackedScene" uid="uid://dpghg4e68hxw5" path="res://scenes/main_character.tscn" id="2_e1mff"]
-[ext_resource type="PackedScene" uid="uid://hmfei3cuywpr" path="res://scenes/yellowLight.tscn" id="3_20ude"]
+[ext_resource type="PackedScene" path="res://scenes/yellowLight.tscn" id="3_20ude"]
 [ext_resource type="PackedScene" uid="uid://bkdt5rrp8cdwf" path="res://scenes/Lights/greenLight.tscn" id="4_b84iu"]
 [ext_resource type="PackedScene" uid="uid://c3nfs38cfgrdr" path="res://scenes/Lights/redLight.tscn" id="5_sgga8"]
 [ext_resource type="PackedScene" uid="uid://c2g30yvpwh5rk" path="res://scenes/Lights/orangeLight.tscn" id="6_as3oq"]
