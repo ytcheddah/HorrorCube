@@ -1,8 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://dpghg4e68hxw5"]
+[gd_scene load_steps=17 format=3 uid="uid://dpghg4e68hxw5"]
 
 [ext_resource type="Texture2D" uid="uid://c1bcw5oaxupy6" path="res://assets/Character/MC_Simpleton_SpriteSheet.png" id="1_m8f4y"]
 [ext_resource type="Script" path="res://scripts/mainCharacter.gd" id="1_nky5t"]
-[ext_resource type="PackedScene" uid="uid://bd75rnqeprkpg" path="res://scenes/Icons/alert_icon.tscn" id="2_kqc6v"]
 [ext_resource type="Texture2D" uid="uid://bt2i7lbipjtln" path="res://assets/Character/NormalMap1.0.png" id="2_qe5fq"]
 [ext_resource type="PackedScene" uid="uid://ct1ws77373ae2" path="res://scenes/Lights/coneLight.tscn" id="4_45ek0"]
 
@@ -510,9 +509,6 @@ height = 48.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_nky5t")
-
-[node name="Alert ICON" parent="CharacterBody2D" instance=ExtResource("2_kqc6v")]
-position = Vector2(-1, -88)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 root_node = NodePath("../AnimationTree")
