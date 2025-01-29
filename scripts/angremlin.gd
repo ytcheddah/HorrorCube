@@ -6,14 +6,33 @@ const FRICTION = 1200
 
 var animation_player: AnimationPlayer
 var is_chasing = false
+@export var speed: float = 100
+var player = null # reference the player
+var direction = null # instantiate
 
 func _ready():
 	
 	animation_player = $AnimationPlayer
+	$Area2D.connect("body_entered", _on_area_entered)
+	$Area2D.connect("body_exited", _on_area_exited)
 
-func _process(delta):
-	pass
 
-func character_movement():
+func _physics_process(delta):
 	
-	move_and_slide()
+	character_movement(delta)
+
+
+func character_movement(delta):
+	
+	if player:
+		var direction = (player.global_position - global_position).normalized()
+		velocity = direction * speed
+		move_and_slide()
+
+func _on_area_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		player = body
+
+func _on_area_exited(body: Node2D) -> void:
+	if body == player:
+		player = null

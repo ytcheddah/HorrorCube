@@ -201,9 +201,12 @@ shape = SubResource("CircleShape2D_eibow")
 [node name="angler_light" parent="CharacterBody2D" instance=ExtResource("2_qh6lf")]
 position = Vector2(-37, -1)
 
-[node name="detection_area" type="Area2D" parent="CharacterBody2D"]
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/detection_area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
 visible = false
 position = Vector2(-44, 0)
 shape = SubResource("CircleShape2D_s5qn6")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_detection_area_body_exited"]

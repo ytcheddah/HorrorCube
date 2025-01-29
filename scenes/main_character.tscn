@@ -507,7 +507,7 @@ height = 48.0
 
 [node name="mainCharacter" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 script = ExtResource("1_nky5t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]

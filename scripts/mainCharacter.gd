@@ -72,7 +72,6 @@ func player_movement(delta):
 	else:
 		velocity += (input * ACCEL * delta)
 		velocity = velocity.limit_length(MAX_SPEED)
-
 	#print(input) # shows how the movement works, really cool!
 	move_and_slide()
 
