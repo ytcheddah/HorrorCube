@@ -31,8 +31,10 @@ func character_movement(delta):
 
 func _on_area_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		is_chasing = true
 		player = body
 
 func _on_area_exited(body: Node2D) -> void:
 	if body == player:
+		is_chasing = false
 		player = null
