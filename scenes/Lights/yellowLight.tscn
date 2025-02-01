@@ -10,7 +10,7 @@ radius = 118.511
 [node name="yellowLight" type="PointLight2D" parent="."]
 scale = Vector2(-2.15177, -2)
 color = Color(0.721494, 0.572068, 0.150048, 1)
-energy = 5.0
+energy = 2.0
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 0.5

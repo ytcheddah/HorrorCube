@@ -10,12 +10,10 @@ radius = 118.511
 [node name="orangeLight" type="PointLight2D" parent="."]
 scale = Vector2(-2.15177, -2)
 color = Color(0.83681, 0.49587, 0.2546, 1)
-energy = 5.0
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 0.5
 texture = ExtResource("1_wd5le")
-height = 300.0
 
 [node name="Area2D" type="Area2D" parent="orangeLight"]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfrq68btork7j"
-path="res://.godot/imported/squihomie.png-78a347e9e39807789266e8ee3c8092ff.ctex"
+uid="uid://bqpd0jx11g02a"
+path="res://.godot/imported/squihomieAtk1.png-dae3a8a6892050aca47d03affed4ad89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/monsters/squihomie.png"
-dest_files=["res://.godot/imported/squihomie.png-78a347e9e39807789266e8ee3c8092ff.ctex"]
+source_file="res://assets/monsters/skullCrawler/squihomieAtk1.png"
+dest_files=["res://.godot/imported/squihomieAtk1.png-dae3a8a6892050aca47d03affed4ad89.ctex"]
 
 [params]
 

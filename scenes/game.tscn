@@ -1,3 +1,128 @@
-[gd_scene format=3 uid="uid://d12mglbeh43mu"]
+[gd_scene load_steps=4 format=3 uid="uid://d12mglbeh43mu"]
+
+[ext_resource type="PackedScene" uid="uid://dpghg4e68hxw5" path="res://scenes/main_character.tscn" id="1_edjh3"]
+[ext_resource type="PackedScene" uid="uid://dk0lb05w6jdea" path="res://scenes/Obstacles/rectangle.tscn" id="2_112yn"]
+[ext_resource type="PackedScene" uid="uid://hmfei3cuywpr" path="res://scenes/Lights/yellowLight.tscn" id="3_i55x1"]
 
 [node name="game" type="Node2D"]
+
+[node name="BackGround" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(87.3, 87.3)
+color = Color(0.6, 0.705882, 0.435294, 1)
+
+[node name="mainCharacter" parent="." instance=ExtResource("1_edjh3")]
+position = Vector2(576, 120)
+
+[node name="MapObstacles" type="Node2D" parent="."]
+position = Vector2(0, 640)
+rotation = -1.5708
+scale = Vector2(13.3, 2.7)
+
+[node name="Room1" type="Node2D" parent="MapObstacles"]
+
+[node name="Rect1" parent="MapObstacles/Room1" instance=ExtResource("2_112yn")]
+
+[node name="Rect2" parent="MapObstacles/Room1" instance=ExtResource("2_112yn")]
+position = Vector2(-3.05176e-05, 23.7037)
+scale = Vector2(0.1, 5.9)
+
+[node name="Rect3" parent="MapObstacles/Room1" instance=ExtResource("2_112yn")]
+position = Vector2(-0.000354767, 261.111)
+scale = Vector2(0.1, 6)
+
+[node name="Rect4" parent="MapObstacles/Room1" instance=ExtResource("2_112yn")]
+position = Vector2(-0.000549316, 402.963)
+
+[node name="Rect5" parent="MapObstacles/Room1" instance=ExtResource("2_112yn")]
+position = Vector2(43.3082, 23.7051)
+scale = Vector2(0.1, 15.8)
+
+[node name="Hallway" type="Node2D" parent="MapObstacles"]
+position = Vector2(33.6835, 521.482)
+scale = Vector2(0.1, 16.8)
+
+[node name="Rect3" parent="MapObstacles/Hallway" instance=ExtResource("2_112yn")]
+position = Vector2(-433.083, 1.41085)
+scale = Vector2(8, 0.0595238)
+
+[node name="Rect4" parent="MapObstacles/Hallway" instance=ExtResource("2_112yn")]
+position = Vector2(-96.2458, 22.5308)
+scale = Vector2(3, 0.3)
+
+[node name="Rect6" parent="MapObstacles/Hallway" instance=ExtResource("2_112yn")]
+position = Vector2(1.52588e-05, 3.8147e-06)
+
+[node name="Rect7" parent="MapObstacles/Hallway" instance=ExtResource("2_112yn")]
+position = Vector2(-96.9931, 2.79981)
+scale = Vector2(1, 0.35119)
+
+[node name="Rect8" parent="MapObstacles/Hallway" instance=ExtResource("2_112yn")]
+position = Vector2(-96.2438, 14.1093)
+scale = Vector2(1, 0.35119)
+
+[node name="Room2" type="Node2D" parent="MapObstacles"]
+
+[node name="Rect1" parent="MapObstacles/Room2" instance=ExtResource("2_112yn")]
+position = Vector2(1.20301, 3.98188e-05)
+scale = Vector2(-4.5, 1)
+
+[node name="Rect2" parent="MapObstacles/Room2" instance=ExtResource("2_112yn")]
+position = Vector2(-14.4366, 379.259)
+scale = Vector2(0.1, 7.9)
+
+[node name="Rect5" parent="MapObstacles/Room2" instance=ExtResource("2_112yn")]
+position = Vector2(-0.00045073, 331.852)
+scale = Vector2(0.1, 7.9)
+
+[node name="Rect4" parent="MapObstacles/Room2" instance=ExtResource("2_112yn")]
+position = Vector2(-0.00067842, 497.778)
+scale = Vector2(0.8, 1)
+
+[node name="Rect6" parent="MapObstacles/Room2" instance=ExtResource("2_112yn")]
+position = Vector2(-52.9331, 545.183)
+scale = Vector2(0.8, 1)
+
+[node name="Rect7" parent="MapObstacles/Room2" instance=ExtResource("2_112yn")]
+position = Vector2(-62.5569, 379.257)
+scale = Vector2(0.7, 1)
+
+[node name="Rect8" parent="MapObstacles/Room2" instance=ExtResource("2_112yn")]
+position = Vector2(-52.9328, 379.258)
+scale = Vector2(0.1, 7.9)
+
+[node name="Rect9" parent="MapObstacles/Room2" instance=ExtResource("2_112yn")]
+position = Vector2(-24.0602, 23.7029)
+scale = Vector2(0.1, 7.9)
+
+[node name="Rect10" parent="MapObstacles/Room2" instance=ExtResource("2_112yn")]
+position = Vector2(-24.0604, 189.629)
+scale = Vector2(0.1, 8.8)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="yellowLight1" parent="." instance=ExtResource("3_i55x1")]
+position = Vector2(320, 768)
+scale = Vector2(0.5, 0.5)
+
+[node name="yellowLight2" parent="." instance=ExtResource("3_i55x1")]
+position = Vector2(576, 320)
+
+[node name="yellowLight3" parent="." instance=ExtResource("3_i55x1")]
+position = Vector2(832, 768)
+scale = Vector2(0.5, 0.5)
+
+[node name="yellowLight4" parent="." instance=ExtResource("3_i55x1")]
+position = Vector2(1280, 1064)
+scale = Vector2(0.6, 0.6)
+
+[node name="yellowLight6" parent="." instance=ExtResource("3_i55x1")]
+position = Vector2(192, 1088)
+scale = Vector2(0.4, 0.4)
+
+[node name="yellowLight7" parent="." instance=ExtResource("3_i55x1")]
+position = Vector2(832, 1088)
+scale = Vector2(0.4, 0.4)
